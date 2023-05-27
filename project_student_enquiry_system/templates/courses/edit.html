@@ -1,4 +1,4 @@
-{% {% extends 'layouts/master.html' %} %}
+{% extends 'layouts/master.html' %}
 
 {% block title %}
 Courses | Update
@@ -6,6 +6,7 @@ Courses | Update
 
 {% block content %}
 <div class="container">
+    <a href="{% url 'course-index' %}", class="btn btn-primary btn-sm mt-3 mb-2">Back</a>
     <h1>This is Courses Update page</h1>
 </div>
 {% endblock %}
