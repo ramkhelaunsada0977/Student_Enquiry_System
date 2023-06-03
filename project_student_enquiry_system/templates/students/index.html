@@ -28,9 +28,12 @@
                 <td>{{ val.contact }}</td>
                 <td>{{ val.course.course_name }}</td>
                 <td>{{ val.created_at }}</td>
-                <td><a href="{% url 'course-edit' %}", class="btn btn-primary btn-sm mt-3 mb-2">Edit</a></td>
-                <td><a href="{% url 'course-show' %}", class="btn btn-primary btn-sm mt-3 mb-2">Show</a></td>
-                <td><a href="{% url 'course-show' %}", class="btn btn-primary btn-sm mt-3 mb-2">Delect</a></td>
+                <td><a href="{% url 'student-show' val.id %}",
+                     class="btn btn-primary btn-sm mt-3 mb-2">Show</a></td>
+                <td><a href="{% url 'student-edit' val.id %}", 
+                    class="btn btn-primary btn-sm mt-3 mb-2">Edit</a></td>
+                <td><a href="{% url 'student-show' val.id %}", 
+                    class="btn btn-primary btn-sm mt-3 mb-2">Delete</a></td>
             </tr>
             {% endfor %}
         </tbody>
